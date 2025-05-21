@@ -1,4 +1,6 @@
 <script>
+	import { writable } from 'svelte/store';
+
 	export let label = '';
 	export let callback = () => {};
 	export let bgColor = 'bg-blue-500';

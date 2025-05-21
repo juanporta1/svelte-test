@@ -7,6 +7,9 @@
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
   "nxCloudId": "682d15f88edfc91008f2e11d",
+  "projects": {
+    "svelte-app": "app"
+  },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",

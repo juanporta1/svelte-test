@@ -1,0 +1,38 @@
+{
+	"name": "svelte-app",
+	"projectType": "application",
+	"root": "app",
+	"sourceRoot": "app/src",
+	"targets": {
+		"build": {
+			"executor": "@nx/js:node",
+			"options": {
+				"outputPath": "dist/apps/svelte-frontend",
+				"main": "app/build/index.js"
+			}
+		},
+		"dev": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "vite dev",
+				"cwd": "app",
+				"forwardAllArgs": true
+			}
+		},
+		"preview": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "vite preview",
+				"cwd": "app"
+			}
+		},
+		"lint": {
+			"executor": "@nx/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["app/**/*.{ts,js,svelte}"]
+			}
+		}
+	},
+	"tags": []
+}
